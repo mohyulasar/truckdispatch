@@ -213,9 +213,9 @@ export const GET_PAID_OPTIONS = [
   },
   {
     title: "Through Factoring",
-    timeline: "24–48 Hours",
+    timeline: "24 Hours",
     description:
-      "Already working with a factor? We handle the broker credit check with your factoring company and submit invoicing on your behalf — so you receive payment within 24 to 48 hours after delivery.",
+      "Already working with a factor? We handle the broker credit check with your factoring company and submit invoicing on your behalf — so you receive payment within 24 hours after delivery.",
     bullets: [
       "Broker credit check coordinated with your factor",
       "Invoice submission handled on your behalf",
@@ -263,7 +263,7 @@ export const HOW_IT_WORKS_STEPS = [
     step: 6,
     title: "Get Paid After You Drop",
     description:
-      "Once you deliver and submit your paperwork, we help you get paid fast — through Quick Pay directly from the broker (2–3 days) or factoring with invoice submission handled for you (24–48 hours).",
+      "Once you deliver and submit your paperwork, we help you get paid fast — through Quick Pay directly from the broker (2–3 days) or factoring with invoice submission handled for you (24 hours).",
   },
 ] as const;
 
@@ -356,7 +356,7 @@ export const FAQ_ITEMS = [
   {
     question: "How do I get paid after I drop a load?",
     answer:
-      "After delivery, we help you get paid quickly two ways: Quick Pay — direct broker payment in 2–3 days if you don't use a factoring company; or Through Factoring — we coordinate broker credit checks and submit invoicing to your factor so you receive payment in 24–48 hours.",
+      "After delivery, we help you get paid quickly two ways: Quick Pay — direct broker payment in 2–3 days if you don't use a factoring company; or Through Factoring — we coordinate broker credit checks and submit invoicing to your factor so you receive payment in 24 hours.",
   },
   {
     question: "Can I choose which loads to accept?",
@@ -366,7 +366,7 @@ export const FAQ_ITEMS = [
   {
     question: "Is there a long-term contract?",
     answer:
-      "We offer flexible agreements. Most carriers start with a simple dispatch agreement with clear terms. Ask about our options during your free consultation.",
+      "No long-term lock-in. We use a simple dispatch agreement with clear terms, and you're free to leave anytime if you feel uncomfortable or unsatisfied with our service — no penalties, no hassle.",
   },
 ] as const;
 
