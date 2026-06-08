@@ -1,32 +1,28 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/sections/PageHero";
 import { HowItWorksSection } from "@/components/sections/HowItWorksSection";
+import { TransparencySection } from "@/components/sections/TransparencySection";
 import { CTABand } from "@/components/sections/CTABand";
+import { HOW_IT_WORKS_REQUIREMENTS } from "@/lib/constants";
 import { createPageMetadata } from "@/lib/utils";
 
 export const metadata: Metadata = createPageMetadata({
   title: "How It Works",
   description:
-    "See how Global Dispatch Services onboards carriers and starts booking loads within 48 hours.",
+    "Transparent dispatch under your MC — profile setup in minutes, you approve every load, setup packets and rate cons sent to your email.",
   path: "/how-it-works",
 });
-
-const requirements = [
-  "Active MC authority in your name",
-  "Valid insurance (cargo and liability)",
-  "Equipment ready to haul (semi, box truck, hotshot, sprinter/cargo van, etc.)",
-  "Willingness to communicate load preferences and availability",
-];
 
 export default function HowItWorksPage() {
   return (
     <>
       <PageHero
         title="How It Works"
-        description="From your first quote request to your first booked load — here's exactly what to expect when you partner with us."
+        description="From profile setup to your first rate con — every step runs under your MC authority with full transparency. Setup packets and rate confirmations go directly to your email."
       />
 
       <HowItWorksSection />
+      <TransparencySection />
 
       <section className="py-16 sm:py-20">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
@@ -34,7 +30,7 @@ export default function HowItWorksPage() {
             What You&apos;ll Need to Get Started
           </h2>
           <ul className="mt-6 space-y-4">
-            {requirements.map((req) => (
+            {HOW_IT_WORKS_REQUIREMENTS.map((req) => (
               <li
                 key={req}
                 className="flex items-start gap-3 rounded-lg border border-slate-200 bg-white p-4 text-slate-700"

@@ -195,31 +195,69 @@ export const CARRIER_SERVICES = [
   },
 ] as const;
 
+export const HOW_IT_WORKS_INTRO =
+  "Transparent dispatch from day one. Your documents stay in your inbox, your loads run under your MC, and you approve every freight before we book.";
+
 export const HOW_IT_WORKS_STEPS = [
   {
     step: 1,
-    title: "Apply & Connect",
+    title: "Complete Your Profile",
     description:
-      "Fill out our quick quote form. We'll review your MC authority, equipment, and preferred lanes.",
+      "Share your essential documents — MC authority, insurance, and carrier paperwork. We collect what we need and build your complete profile in our dispatch system, usually in 5 to 10 minutes.",
   },
   {
     step: 2,
-    title: "Onboarding Setup",
+    title: "We Source Loads for Your MC",
     description:
-      "We configure your dispatch profile, load preferences, and communication channels within 24–48 hours.",
+      "Your dedicated dispatcher starts finding freight matched to your equipment and lanes. Every load is worked under your MC authority — you remain the carrier, we handle the dispatch.",
   },
   {
     step: 3,
-    title: "First Load Booked",
+    title: "You Approve Every Load",
     description:
-      "Your dedicated dispatcher starts sourcing loads. You approve each load before we book it.",
+      "We present load options with rate, miles, pickup, and delivery details. Nothing moves forward until you agree on the load you want to run.",
   },
   {
     step: 4,
-    title: "Ongoing Support",
+    title: "Setup Packet to Your Email",
     description:
-      "Continuous load coverage, rate optimization, and 24/7 support. Dispatch fees begin on day 8 — your first week is free.",
+      "Once you approve a load, we ask the broker to send the setup packet directly to your email. You receive all broker documents firsthand — full transparency, nothing hidden.",
   },
+  {
+    step: 5,
+    title: "Rate Con in Your Inbox",
+    description:
+      "After broker setup is complete, the rate confirmation is sent to your email only. You stay in full notice of every load detail before you roll.",
+  },
+] as const;
+
+export const TRANSPARENCY_HIGHLIGHTS = [
+  {
+    title: "Setup Packets to Your Email",
+    description:
+      "When you approve a load, we request the broker send the setup packet directly to your inbox — not ours. You see every document.",
+    icon: "mail" as const,
+  },
+  {
+    title: "Rate Cons Sent Directly to You",
+    description:
+      "Rate confirmations arrive in your email only, so you always know the exact terms before you hit the road.",
+    icon: "file" as const,
+  },
+  {
+    title: "Loads Under Your MC Authority",
+    description:
+      "We dispatch freight under your MC. You stay the carrier — we handle sourcing, negotiation, and broker communication.",
+    icon: "shield" as const,
+  },
+] as const;
+
+export const HOW_IT_WORKS_REQUIREMENTS = [
+  "Active MC authority in your name",
+  "Valid insurance (cargo and liability)",
+  "Carrier documents (W-9, authority paperwork)",
+  "Equipment details and preferred lanes",
+  "Email address for broker setup packets and rate cons",
 ] as const;
 
 export const TESTIMONIALS = [
