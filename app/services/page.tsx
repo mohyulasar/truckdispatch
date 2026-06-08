@@ -5,6 +5,7 @@ import { CTABand } from "@/components/sections/CTABand";
 import { MultilingualSupport } from "@/components/sections/MultilingualSupport";
 import { SupportCoverage } from "@/components/sections/SupportCoverage";
 import { LoadIssueResolution } from "@/components/sections/LoadIssueResolution";
+import { GetPaidSection } from "@/components/sections/GetPaidSection";
 import { CarrierSupportServices } from "@/components/sections/CarrierSupportServices";
 import { PaymentTermsBanner } from "@/components/sections/PaymentTermsBanner";
 import { SERVICES } from "@/lib/constants";
@@ -13,7 +14,7 @@ import { createPageMetadata } from "@/lib/utils";
 export const metadata: Metadata = createPageMetadata({
   title: "Services",
   description:
-    "Full-service truck dispatch with multilingual support, 24/7 coverage, load issue resolution, roadside assistance, and factoring setup.",
+    "Full-service truck dispatch with multilingual support, 24/7 coverage, Quick Pay and factoring payment options, and load issue resolution.",
   path: "/services",
 });
 
@@ -69,6 +70,7 @@ export default function ServicesPage() {
       <MultilingualSupport />
       <SupportCoverage />
       <LoadIssueResolution />
+      <GetPaidSection />
       <CarrierSupportServices />
 
       <section className="bg-slate-50 py-16 sm:py-20">

@@ -190,7 +190,37 @@ export const CARRIER_SERVICES = [
   {
     title: "Factoring Setup",
     description:
-      "We help you connect with a factoring company to purchase your broker invoices — improving cash flow so you get paid faster on completed loads.",
+      "Need a factoring partner? We help you connect with a factoring company so you're ready for faster invoice purchasing — see our Payment section for how factoring payouts work after each load.",
+    icon: "bank" as const,
+  },
+] as const;
+
+export const GET_PAID_INTRO =
+  "Getting paid shouldn't be the hardest part of the haul. After you drop, we make sure your invoices move quickly — whether you use Quick Pay or factoring.";
+
+export const GET_PAID_OPTIONS = [
+  {
+    title: "Quick Pay",
+    timeline: "2–3 Days",
+    description:
+      "Don't have a factoring company? We help you collect payment directly from the broker after you drop the load and submit your documents — typically within 2 to 3 days.",
+    bullets: [
+      "Direct payment from the broker",
+      "No factoring company required",
+      "We guide you through invoicing and follow-up",
+    ],
+    icon: "zap" as const,
+  },
+  {
+    title: "Through Factoring",
+    timeline: "24–48 Hours",
+    description:
+      "Already working with a factor? We handle the broker credit check with your factoring company and submit invoicing on your behalf — so you receive payment within 24 to 48 hours after delivery.",
+    bullets: [
+      "Broker credit check coordinated with your factor",
+      "Invoice submission handled on your behalf",
+      "Faster cash flow on completed loads",
+    ],
     icon: "bank" as const,
   },
 ] as const;
@@ -228,6 +258,12 @@ export const HOW_IT_WORKS_STEPS = [
     title: "Rate Con in Your Inbox",
     description:
       "After broker setup is complete, the rate confirmation is sent to your email only. You stay in full notice of every load detail before you roll.",
+  },
+  {
+    step: 6,
+    title: "Get Paid After You Drop",
+    description:
+      "Once you deliver and submit your paperwork, we help you get paid fast — through Quick Pay directly from the broker (2–3 days) or factoring with invoice submission handled for you (24–48 hours).",
   },
 ] as const;
 
@@ -316,6 +352,11 @@ export const FAQ_ITEMS = [
     question: "Are there any upfront charges?",
     answer:
       "No. There are zero upfront fees. You get a full week of dispatch with no advance dispatch fee — you only pay starting on day 8, based on the loads we book for you.",
+  },
+  {
+    question: "How do I get paid after I drop a load?",
+    answer:
+      "After delivery, we help you get paid quickly two ways: Quick Pay — direct broker payment in 2–3 days if you don't use a factoring company; or Through Factoring — we coordinate broker credit checks and submit invoicing to your factor so you receive payment in 24–48 hours.",
   },
   {
     question: "Can I choose which loads to accept?",

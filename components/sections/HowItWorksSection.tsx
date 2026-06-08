@@ -43,16 +43,16 @@ export function HowItWorksSection({ compact = false }: { compact?: boolean }) {
           </ol>
         </div>
 
-        {/* Desktop: connected step row */}
+        {/* Desktop: 3 columns — compact shows 3 steps, full shows 6 in 2 rows */}
         <div
           className={cn(
-            "mt-12 hidden lg:grid",
-            compact ? "grid-cols-3 gap-8" : "grid-cols-5 gap-4",
+            "mt-12 hidden gap-6 lg:grid",
+            compact ? "grid-cols-3" : "grid-cols-3",
           )}
         >
           {steps.map((step, index) => (
             <div key={step.step} className="relative">
-              {index < steps.length - 1 && (
+              {compact && index < steps.length - 1 && (
                 <span
                   className="absolute left-[calc(50%+1.5rem)] top-6 h-0.5 w-[calc(100%-3rem)] bg-accent/30"
                   aria-hidden="true"
@@ -62,7 +62,7 @@ export function HowItWorksSection({ compact = false }: { compact?: boolean }) {
                 <div className="relative z-10 mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-accent text-lg font-bold text-white">
                   {step.step}
                 </div>
-                <div className="rounded-xl border border-slate-200 bg-white p-5">
+                <div className="h-full rounded-xl border border-slate-200 bg-white p-5">
                   <h3 className="text-base font-semibold text-navy xl:text-lg">
                     {step.title}
                   </h3>

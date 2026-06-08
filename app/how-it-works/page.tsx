@@ -9,7 +9,7 @@ import { createPageMetadata } from "@/lib/utils";
 export const metadata: Metadata = createPageMetadata({
   title: "How It Works",
   description:
-    "Transparent dispatch under your MC — profile setup in minutes, you approve every load, setup packets and rate cons sent to your email.",
+    "Transparent dispatch under your MC — profile setup, load approval, setup packets and rate cons to your email, and fast payment after drop.",
   path: "/how-it-works",
 });
 
@@ -18,7 +18,7 @@ export default function HowItWorksPage() {
     <>
       <PageHero
         title="How It Works"
-        description="From profile setup to your first rate con — every step runs under your MC authority with full transparency. Setup packets and rate confirmations go directly to your email."
+        description="From profile setup to getting paid after drop — every step runs under your MC authority with full transparency. Setup packets, rate cons, and payment support included."
       />
 
       <HowItWorksSection />
