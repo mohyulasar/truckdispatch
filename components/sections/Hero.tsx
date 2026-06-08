@@ -13,7 +13,7 @@ export function Hero() {
       <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:flex lg:items-center lg:gap-12 lg:px-8 lg:py-28">
         <div className="lg:flex-1">
           <p className="mb-4 inline-block rounded-full bg-accent/20 px-4 py-1.5 text-sm font-medium text-accent-light">
-            Trusted by 150+ carriers nationwide
+            Trusted by 15+ carriers nationwide
           </p>
           <h1 className="text-3xl font-bold leading-tight sm:text-4xl lg:text-5xl">
             Focus on Driving.

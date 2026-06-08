@@ -10,11 +10,11 @@ export function Testimonials() {
             What Carriers Say
           </h2>
           <p className="mt-4 text-base text-slate-600">
-            Real feedback from owner-operators and fleet owners we dispatch for.
+            Real feedback from van carriers we dispatch for nationwide.
           </p>
         </div>
 
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mx-auto mt-12 grid max-w-4xl gap-6 sm:grid-cols-2">
           {TESTIMONIALS.map((testimonial) => (
             <blockquote
               key={testimonial.author}

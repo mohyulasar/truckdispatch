@@ -24,8 +24,8 @@ export const NAV_LINKS = [
 ] as const;
 
 export const TRUST_STATS = [
-  { value: "500+", label: "Loads dispatched monthly" },
-  { value: "150+", label: "Active carriers" },
+  { value: "200+", label: "Loads dispatched monthly" },
+  { value: "15+", label: "Active carriers" },
   { value: "5+", label: "Years of experience" },
   { value: "24/7", label: "Dispatch support" },
 ] as const;
@@ -299,21 +299,15 @@ export const HOW_IT_WORKS_REQUIREMENTS = [
 export const TESTIMONIALS = [
   {
     quote:
-      "Global Dispatch Services changed my business. I'm making more per mile and spending zero time on load boards.",
-    author: "Marcus T.",
-    role: "Owner-Operator, Semi Truck",
+      "We've been working with Global Dispatch Services for more than two years now. They're professional, available whenever we need them, and always keep our vans loaded with solid freight. Honest communication and reliable dispatch — that's why we stay.",
+    author: "Li Transportation LLC",
+    role: "Dry Van",
   },
   {
     quote:
-      "We added 3 trucks last year without hiring dispatch staff. They handle everything for our fleet.",
-    author: "Sarah K.",
-    role: "Fleet Owner, 8 Trucks",
-  },
-  {
-    quote:
-      "Transparent pricing, responsive team, and they actually know the lanes I run. Highly recommend.",
-    author: "James R.",
-    role: "Owner-Operator, Hotshot",
+      "Top Golden Service Inc trusts GDS with our van operations because they deliver every time. Great load selection, quick responses on broker calls, and they handle paperwork so we can focus on the road. Couldn't ask for a better dispatch partner.",
+    author: "Top Golden Service Inc",
+    role: "Dry Van",
   },
 ] as const;
 

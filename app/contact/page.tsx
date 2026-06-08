@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Mail, Phone, Clock } from "lucide-react";
 import { PageHero } from "@/components/sections/PageHero";
 import { ContactForm } from "@/components/forms/ContactForm";
-import { SITE } from "@/lib/constants";
+import { SITE, TESTIMONIALS } from "@/lib/constants";
 import { createPageMetadata } from "@/lib/utils";
 
 export const metadata: Metadata = createPageMetadata({
@@ -68,11 +68,10 @@ export default function ContactPage() {
 
               <blockquote className="mt-8 rounded-xl border border-slate-200 bg-slate-50 p-6">
                 <p className="text-sm italic text-slate-600">
-                  &ldquo;Global Dispatch Services changed my business. I&apos;m making more
-                  per mile and spending zero time on load boards.&rdquo;
+                  &ldquo;{TESTIMONIALS[0].quote}&rdquo;
                 </p>
                 <footer className="mt-3 text-sm font-semibold text-navy">
-                  — Marcus T., Owner-Operator
+                  — {TESTIMONIALS[0].author}, {TESTIMONIALS[0].role}
                 </footer>
               </blockquote>
             </div>
