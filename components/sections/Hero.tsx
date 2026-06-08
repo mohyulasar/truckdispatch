@@ -47,10 +47,10 @@ export function Hero() {
             <h2 className="text-lg font-semibold text-white">Why carriers choose us</h2>
             <ul className="mt-4 space-y-4">
               {[
-                "Higher-paying loads with better lane consistency",
-                "Dedicated dispatcher assigned to your account",
-                "Transparent pricing — no hidden fees",
-                "You approve every load before we book",
+                "Rates from 3.5% for semi truck & trailer",
+                "No upfront fees — pay only from day 8",
+                "24/7 dispatch including weekends & holidays",
+                "Multilingual support in 6 languages",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3 text-sm text-slate-300 sm:text-base">
                   <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-accent" />

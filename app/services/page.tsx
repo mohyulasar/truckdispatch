@@ -1,14 +1,19 @@
 import type { Metadata } from "next";
-import { FileText, MessageSquare, TrendingUp, Truck, CheckCircle } from "lucide-react";
+import { FileText, MessageSquare, TrendingUp, Truck } from "lucide-react";
 import { PageHero } from "@/components/sections/PageHero";
 import { CTABand } from "@/components/sections/CTABand";
+import { MultilingualSupport } from "@/components/sections/MultilingualSupport";
+import { SupportCoverage } from "@/components/sections/SupportCoverage";
+import { LoadIssueResolution } from "@/components/sections/LoadIssueResolution";
+import { CarrierSupportServices } from "@/components/sections/CarrierSupportServices";
+import { PaymentTermsBanner } from "@/components/sections/PaymentTermsBanner";
 import { SERVICES } from "@/lib/constants";
 import { createPageMetadata } from "@/lib/utils";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Services",
   description:
-    "Load sourcing, rate negotiation, broker communication, and paperwork support for owner-operators and small fleets.",
+    "Full-service truck dispatch with multilingual support, 24/7 coverage, load issue resolution, roadside assistance, and factoring setup.",
   path: "/services",
 });
 
@@ -19,25 +24,27 @@ const iconMap = {
   file: FileText,
 };
 
-const additionalServices = [
-  "Lane and market guidance based on current freight trends",
-  "Invoicing and payment follow-up support",
-  "Factoring partner referrals when needed",
-  "Compliance reminders for insurance and authority renewals",
-  "24/7 load support while you're on the road",
-];
-
 export default function ServicesPage() {
   return (
     <>
       <PageHero
         title="Dispatch Services"
-        description="Full-service truck dispatch tailored to owner-operators and small fleets. We handle the business side so you can focus on driving."
+        description="Full-service truck dispatch for owner-operators and small fleets — load sourcing, 24/7 support, multilingual dispatch, and everything you need to stay profitable on the road."
       />
 
       <section className="py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-8 lg:grid-cols-2">
+          <div className="mx-auto max-w-2xl text-center">
+            <h2 className="text-2xl font-bold text-navy sm:text-3xl">
+              Core Dispatch Services
+            </h2>
+            <p className="mt-4 text-base text-slate-600">
+              The foundation of every successful carrier partnership — profitable
+              loads, strong rates, and hands-off broker management.
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-8 lg:grid-cols-2">
             {SERVICES.map((service) => {
               const Icon = iconMap[service.icon];
               return (
@@ -48,7 +55,7 @@ export default function ServicesPage() {
                   <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-navy text-white">
                     <Icon className="h-6 w-6" />
                   </div>
-                  <h2 className="text-xl font-bold text-navy">{service.title}</h2>
+                  <h3 className="text-xl font-bold text-navy">{service.title}</h3>
                   <p className="mt-3 text-base leading-relaxed text-slate-600">
                     {service.description}
                   </p>
@@ -56,20 +63,17 @@ export default function ServicesPage() {
               );
             })}
           </div>
+        </div>
+      </section>
 
-          <div className="mt-16 rounded-xl bg-slate-50 p-6 sm:p-8">
-            <h2 className="text-xl font-bold text-navy sm:text-2xl">
-              Additional Support Included
-            </h2>
-            <ul className="mt-6 grid gap-3 sm:grid-cols-2">
-              {additionalServices.map((item) => (
-                <li key={item} className="flex items-start gap-3 text-slate-600">
-                  <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-accent" />
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
+      <MultilingualSupport />
+      <SupportCoverage />
+      <LoadIssueResolution />
+      <CarrierSupportServices />
+
+      <section className="bg-slate-50 py-16 sm:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <PaymentTermsBanner />
         </div>
       </section>
 

@@ -6,6 +6,7 @@ import { Menu, Phone } from "lucide-react";
 import { NAV_LINKS, SITE } from "@/lib/constants";
 import { Button } from "@/components/ui/Button";
 import { MobileNav } from "./MobileNav";
+import { LogoMark } from "./LogoMark";
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -15,9 +16,7 @@ export function Header() {
       <header className="sticky top-0 z-40 border-b border-slate-200 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/90">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
           <Link href="/" className="flex min-h-11 items-center gap-2">
-            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-navy text-sm font-bold text-white">
-              GD
-            </div>
+            <LogoMark />
             <div className="leading-tight">
               <span className="block text-sm font-bold text-navy sm:text-base">
                 <span className="sm:hidden">{SITE.shortName}</span>

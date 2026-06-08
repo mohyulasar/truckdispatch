@@ -14,7 +14,7 @@ export const metadata: Metadata = createPageMetadata({
 const requirements = [
   "Active MC authority in your name",
   "Valid insurance (cargo and liability)",
-  "Equipment ready to haul (dry van, reefer, flatbed, etc.)",
+  "Equipment ready to haul (semi, box truck, hotshot, sprinter/cargo van, etc.)",
   "Willingness to communicate load preferences and availability",
 ];
 

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { NAV_LINKS, SITE } from "@/lib/constants";
+import { LogoMark } from "./LogoMark";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -11,9 +12,7 @@ export function Footer() {
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div className="sm:col-span-2 lg:col-span-1">
             <div className="mb-4 flex items-center gap-2">
-              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-accent text-sm font-bold text-white">
-                GD
-              </div>
+              <LogoMark variant="accent" />
               <span className="text-lg font-bold text-white">{SITE.name}</span>
             </div>
             <p className="text-sm leading-relaxed">{SITE.tagline}</p>

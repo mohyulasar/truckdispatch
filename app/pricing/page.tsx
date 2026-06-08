@@ -2,13 +2,15 @@ import type { Metadata } from "next";
 import { Check, X } from "lucide-react";
 import { PageHero } from "@/components/sections/PageHero";
 import { CTABand } from "@/components/sections/CTABand";
+import { EquipmentPricingGrid } from "@/components/sections/EquipmentPricingGrid";
+import { PaymentTermsBanner } from "@/components/sections/PaymentTermsBanner";
 import { Button } from "@/components/ui/Button";
 import { createPageMetadata } from "@/lib/utils";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Pricing",
   description:
-    "Transparent dispatch pricing for owner-operators and small fleets. No hidden fees — custom quotes based on fleet size.",
+    "Equipment-based dispatch pricing from 3.5% to 10%. No upfront charges — pay only from day 8.",
   path: "/pricing",
 });
 
@@ -16,15 +18,16 @@ const included = [
   "Load sourcing and booking",
   "Rate negotiation",
   "Broker communication and check calls",
-  "Rate confirmation support",
-  "Dedicated dispatcher",
-  "You approve every load",
+  "Detention, TONU, and lumper support",
+  "24/7 dispatch including weekends and holidays",
+  "Multilingual dispatch support",
+  "Dedicated dispatcher — you approve every load",
 ];
 
 const notIncluded = [
   "Fuel, tolls, or operating expenses",
   "Insurance or authority fees",
-  "Factoring fees (referrals available)",
+  "Factoring fees (setup assistance available)",
   "Equipment maintenance",
 ];
 
@@ -32,9 +35,9 @@ const comparison = [
   { feature: "Load sourcing", diy: false, gds: true },
   { feature: "Rate negotiation", diy: "Self", gds: "Expert team" },
   { feature: "Time on load boards", diy: "Hours daily", gds: "Zero" },
-  { feature: "Broker relationships", diy: "Build yourself", gds: "Established network" },
-  { feature: "Dedicated support", diy: false, gds: true },
-  { feature: "Scales with fleet", diy: false, gds: true },
+  { feature: "After-hours support", diy: false, gds: true },
+  { feature: "Multilingual dispatch", diy: false, gds: true },
+  { feature: "No upfront fees", diy: false, gds: true },
 ];
 
 function ComparisonCell({ value }: { value: boolean | string }) {
@@ -52,21 +55,32 @@ export default function PricingPage() {
     <>
       <PageHero
         title="Simple, Transparent Pricing"
-        description="Our dispatch fee is a percentage of gross load revenue — typically 5–8% depending on fleet size and service level. No hidden fees."
+        description="Dispatch fees range from 3–10% of gross load revenue based on your equipment type. No upfront charges — your first week is free, pay only from day 8."
       />
 
       <section className="py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
-            <p className="text-4xl font-bold text-navy sm:text-5xl">5–8%</p>
-            <p className="mt-2 text-lg text-slate-600">of gross load revenue</p>
+            <p className="text-4xl font-bold text-navy sm:text-5xl">3–10%</p>
+            <p className="mt-2 text-lg text-slate-600">of gross load revenue by equipment</p>
             <p className="mt-4 text-base text-slate-600">
-              Exact rate depends on number of trucks, equipment type, and lanes.
-              Request a custom quote — no obligation.
+              Rates vary by vehicle type. Semi Truck & Semi Trailer carriers enjoy
+              our lowest rate at 3.5%.
             </p>
             <Button href="/contact" size="lg" className="mt-8">
               Get Your Custom Quote
             </Button>
+          </div>
+
+          <div className="mt-16">
+            <h2 className="mb-8 text-center text-xl font-bold text-navy sm:text-2xl">
+              Rates by Equipment Type
+            </h2>
+            <EquipmentPricingGrid />
+          </div>
+
+          <div className="mt-16">
+            <PaymentTermsBanner />
           </div>
 
           <div className="mt-16 grid gap-8 md:grid-cols-2">
